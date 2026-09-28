@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Esperança | Voluntário</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>ONG Esperança</h1>
+
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+
+            <div class="dropdown">
+                <a href="projetos.html" class="dropdown-link">Projetos</a>
+                <div class="submenu">
+                    <a href="projetos.html#agasalho">Campanha do Agasalho</a>
+                    <a href="projetos.html#alimentacao">Alimentando Esperança</a>
+                    <a href="projetos.html#educacao">Educação para Todos</a>
+                    <a href="projetos.html#comunidade">Dia da Comunidade</a>
+                </div>
+            </div>
+
+            <a href="cadastro.html">Seja Voluntário</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="titulo container">
+        <p>FAÇA PARTE</p>
+        <h2>Seja um voluntário</h2>
+        <p>Preencha seus dados para participar das nossas ações.</p>
+    </section>
+
+    <section class="formulario container">
+
+        <form id="formCadastro">
+
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" required minlength="3">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required>
+
+            <div class="linha">
+                <div>
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" maxlength="14"
+                           inputmode="numeric"
+                           pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                           required>
+                </div>
+
+                <div>
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" maxlength="15"
+                           inputmode="numeric"
+                           pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+                           required>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div>
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" maxlength="9"
+                           inputmode="numeric"
+                           pattern="[0-9]{5}-[0-9]{3}"
+                           required>
+                </div>
+
+                <div>
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" required>
+                </div>
+            </div>
+
+            <label for="interesse">Área de interesse</label>
+            <select id="interesse" required>
+                <option value="">Selecione</option>
+                <option>Educação</option>
+                <option>Alimentação</option>
+                <option>Eventos</option>
+                <option>Doações</option>
+            </select>
+
+            <label for="mensagem">Por que deseja ser voluntário?</label>
+            <textarea id="mensagem" rows="4"></textarea>
+
+            <label class="check">
+                <input type="checkbox" required>
+                Aceito participar das ações da ONG.
+            </label>
+
+            <button type="submit">Enviar cadastro</button>
+
+            <p id="mensagemSucesso"></p>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 ONG Esperança - Todos os direitos reservados.</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

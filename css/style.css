@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #26352c;
+    background: #f7f9f7;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Cabeçalho */
+
+header {
+    background: #176b3a;
+    color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo */
+
+.hero {
+    background: #eaf4ed;
+    padding: 60px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero img {
+    width: 420px;
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin: 5px 0 15px;
+}
+
+.hero h2,
+.titulo h2 {
+    font-size: 38px;
+    margin: 5px 0 15px;
+}
+
+.hero p:first-child,
+.titulo p:first-child {
+    color: #176b3a;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.botao,
+button {
+    display: inline-block;
+    background: #176b3a;
+    color: white;
+    border: 0;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+section.container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Cards */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.cards article {
+    background: white;
+    padding: 25px;
+    border: 1px solid #e1e5e1;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.cards h3 {
+    color: #176b3a;
+    margin-bottom: 10px;
+}
+
+/* Projetos */
+
+.titulo {
+    padding-bottom: 20px !important;
+}
+
+.projetos article {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 4px solid #176b3a;
+}
+
+.projetos span {
+    color: #176b3a;
+    font-weight: bold;
+}
+
+.convite {
+    background: #eaf4ed;
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Formulário */
+
+.formulario {
+    max-width: 750px;
+}
+
+form {
+    background: white;
+    padding: 35px;
+    border-radius: 8px;
+    border: 1px solid #e1e5e1;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #9bc9a9;
+}
+
+.linha {
+    display: flex;
+    gap: 20px;
+}
+
+.linha div {
+    flex: 1;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+.check input {
+    width: auto;
+}
+
+button {
+    width: 100%;
+    font-size: 16px;
+}
+
+#mensagemSucesso {
+    color: #176b3a;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Rodapé */
+
+footer {
+    background: #26352c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+/* Celular */
+
+@media (max-width: 700px) {
+    
+    .hero .container {
+        flex-direction: column;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+    
+    header .container,
+    .cards,
+    .linha {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 10px 0 0;
+        display: inline-block;
+    }
+
+    .hero h2,
+    .titulo h2 {
+        font-size: 30px;
+    }
+}
+/* Menu de navegação */
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown */
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #176b3a;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.submenu a {
+    display: block;
+    padding: 8px 15px;
+    margin: 0;
+}
+
+/* Exibe o submenu ao passar o mouse */
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Botão hambúrguer */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: white;
+    border: 0;
+    font-size: 28px;
+    cursor: pointer;
+    margin: 0;
+    width: auto;
+}
